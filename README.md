@@ -62,5 +62,6 @@ PRISM-MS is a Shiny application designed for MALDI imaging analysis workflows. T
 2. Example output: `231027_GUVs_A_5_1.mis` (from the sample dataset) demonstrates a DeepScan with 5-micron spatial resolution and a spot dilation factor of 1.
 
 ## Supplementary Data
-Supplementary datasets used in the analysis are included in this repository. Notably:
+Supplementary datasets used in the manuscript are included in this repository. Notably:
 - **Supplementary Dataset S1**: Available as a zip file `Supplementary Dataset S1.zip`.
+- **Measurement Data**: Available as .imzML and .ibd files https://metaspace2020.eu/project/PRISM-MS 
