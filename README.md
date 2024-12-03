@@ -15,14 +15,13 @@ This repository hosts the PRISM-MS application and related resources for the stu
 PRISM-MS is a Shiny application designed for MALDI imaging analysis workflows. The app simplifies the selection of regions of interest in MALDI datasets and enables guided DeepScan measurements. PRISM-MS is fully self-contained, requiring no additional installation of R or other software.
 
 ## Installation
-1. Clone or download this repository.
+Clone or download this repository.
    ```bash
    git clone https://github.com/CeMOS-Mannheim/PRISM-MS.git
    ```
-   Navigate to the repository to locate `PRISM-MS.rar`.
    
-   Alternatively, without cloning the repository:
-   [Direct Download via Clousi](https://clousi.hs-mannheim.de/index.php/s/6mmEmQmwsS6mf3R)
+Quick Start (without cloning the repository) :
+1. Download `PRISM-MS.rar` [Direct Download newest Release](https://github.com/CeMOS-Mannheim/PRISM-MS/releases/tag/v1.0.0)
 
    
 2.  Unzip the downloaded `PRISM-MS.rar` to a local directory, such as your Desktop.
@@ -66,5 +65,5 @@ PRISM-MS is a Shiny application designed for MALDI imaging analysis workflows. T
 
 ## Supplementary Data
 Supplementary datasets used in the manuscript are included in this repository. Notably:
-- **Supplementary Dataset S1**: Available as a zip file `Supplementary Dataset S1.zip`.
+- **Supplementary Dataset S1**: Available as a zip file from [figshare](https://figshare.com/articles/dataset/Supplementary_Dataset_S1_zip/27951516?file=50940864).
 - **Measurement Data**: Available as .imzML and .ibd files https://metaspace2020.eu/project/PRISM-MS 
