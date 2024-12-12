@@ -1,6 +1,6 @@
 # PRISM-MS: Mass-Guided Single-Cell MALDI Imaging of Low-Mass Metabolites
 
-DOI: 10.1002/advs.202410506
+DOI: [10.1002/advs.202410506](https://doi.org/10.1002/advs.202410506)
 
 This repository hosts the PRISM-MS application and related resources for the study described in our publication:
 **Mass‐Guided Single‐Cell MALDI Imaging of Low‐Mass Metabolites Reveals Cellular Activation Markers.**
