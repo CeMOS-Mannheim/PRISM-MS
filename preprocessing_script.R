@@ -22,8 +22,8 @@ convert_imzmls <- function(path_in,path_csv,folder_out,out_name,res_ppm = 3,mass
   
   alignment_peaks <- unique(round(alignment_peaks,2))
   
-  print(alignment_peaks)
-
+  alignment_peaks
+  break
   for(path in paths){
 
     msData_cardinal <- Cardinal::readMSIData(path, attach.only=TRUE, resolution = res_ppm, units = "ppm", mass.range = mass_range)
@@ -53,5 +53,5 @@ convert_imzmls <- function(path_in,path_csv,folder_out,out_name,res_ppm = 3,mass
 
 
 
-convert_imzmls(path_in="F:/James/transfer_imzml",path_csv="Q://10-James_Cairns//HMDB_E_10.csv", folder_out = "F:/James/HMDBE_10_TIMS/",out_name = "_FINAL")
+convert_imzmls(path_in="F:/James/transfer_imzml",path_csv="Z://10-James_Cairns//HMDB_E_10.csv", folder_out = "F:/James/HMDBE_10_TIMS/",out_name = "_FINAL")
 

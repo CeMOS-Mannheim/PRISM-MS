@@ -589,8 +589,8 @@ server <- function(input, output, session) {
       upper_new <- body_base[3]
       
       #take a different range, not pos pixels but all pixels.
-      x_centr <- centr_pos_x#round(mean(x_range))#centr_pos_x#
-      y_centr <- centr_pos_y#round(mean(y_range))#centr_pos_y#r
+      x_centr <- diff(x_range)/2#centr_pos_x#round(mean(x_range))#centr_pos_x#
+      y_centr <- diff(y_range)/2
       
       
       #this only works for one region  so far and is for the distance to the top left corner
@@ -602,8 +602,9 @@ server <- function(input, output, session) {
       method_new[[1]] <- list(input$new_method)
       
       
-      dilation_factor_x <- 0#resulting_res
-      dilation_factor_y <- 0#resulting_res
+      dilation_factor_x <- (x_range[2]-x_range[1])/dim(im_mat)[2]
+      dilation_factor_y <- (y_range[2]-y_range[1])/dim(im_mat)[1]
+      
       for(reg in 1:length(canvas_conts_transformed)){
         
         body_new <- body_base
@@ -631,11 +632,11 @@ server <- function(input, output, session) {
           
           x_point <- canvas_conts_transformed[[reg]]$x[point_idx]
           x_dist <- (x_centr-x_point)/x_centr
-          x_point <- as.character(round(x_point+x_shift))#+x_dist*+round(dilation_factor_x/2)))
+          x_point <- as.character(round(x_point+x_shift-x_dist*round(dilation_factor_x/2)))
           
           y_point <- canvas_conts_transformed[[reg]]$y[point_idx]
           y_dist <- (y_centr-y_point)/y_centr
-          y_point <- as.character(round(y_point+y_shift))#+y_dist*+round(dilation_factor_y/2)))
+          y_point <- as.character(round(y_point+y_shift-y_dist*round(dilation_factor_y/2)))
           
           # print(paste(x_point,y_point))
           
