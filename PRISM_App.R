@@ -489,6 +489,10 @@ server <- function(input, output, session) {
       # Convert back to EBImage object
       canvas_dil2 <- base::as.matrix(canvas_dil2_im)
       
+      canvas_dil2 <- (cbind(matrix(0,nrow=dim(canvas_dil2)[1],ncol=x_range[1]),canvas_dil2))
+      
+      canvas_dil2 <- (rbind(matrix(0,nrow=y_range[1],ncol=dim(canvas_dil2)[2]),canvas_dil2))
+      
       canvas_dil2[is.na(canvas_dil2)] <- 0
       canvas <- canvas_dil2
       
@@ -613,8 +617,8 @@ server <- function(input, output, session) {
         #find which center was closest to this new cluster:
         for(reg_c in reg_center){
           
-          x_spot <- canvas_conts_transformed[[reg]]$x[1]+x_shift
-          y_spot <- canvas_conts_transformed[[reg]]$y[1]+y_shift
+          x_spot <- canvas_conts_transformed[[reg]]$x[1]#+x_shift
+          y_spot <- canvas_conts_transformed[[reg]]$y[1]#+y_shift
           
           distance <- sqrt((x_spot-reg_c[1])^2+(y_spot-reg_c[2])^2)
           
@@ -631,12 +635,12 @@ server <- function(input, output, session) {
           
           
           x_point <- canvas_conts_transformed[[reg]]$x[point_idx]
-          x_dist <- (x_centr-x_point)/x_centr
-          x_point <- as.character(round(x_point+x_shift-x_dist*round(dilation_factor_x/2)))
+          # x_dist <- (x_centr-x_point)/x_centr
+          # x_point <- as.character(round(x_point+x_shift-x_dist*round(dilation_factor_x/2)))
           
           y_point <- canvas_conts_transformed[[reg]]$y[point_idx]
-          y_dist <- (y_centr-y_point)/y_centr
-          y_point <- as.character(round(y_point+y_shift-y_dist*round(dilation_factor_y/2)))
+          # y_dist <- (y_centr-y_point)/y_centr
+          # y_point <- as.character(round(y_point+y_shift-y_dist*round(dilation_factor_y/2)))
           
           # print(paste(x_point,y_point))
           
