@@ -21,7 +21,7 @@ Clone or download this repository.
    ```
    
 Quick Start (without cloning the repository) :
-1. Download `PRISM-MS.rar` [Direct Download newest Release](https://github.com/CeMOS-Mannheim/PRISM-MS/releases/tag/v1.0.0)
+1. Download `PRISM-MS.rar` [Direct Download newest Release](https://github.com/CeMOS-Mannheim/PRISM-MS/releases)
 
    
 2.  Unzip the downloaded `PRISM-MS.rar` to a local directory, such as your Desktop.
